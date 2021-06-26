@@ -1,0 +1,243 @@
+:root {
+    /* color */
+
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+
+    /* size */
+
+    --padding: 12px;
+    --avatar-size: 36px;
+
+    /* font-size */
+
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+button,
+button:focus {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    background: #263238;
+    color: var(--white-color);
+}
+
+header.hotube {
+    font-size: var(--font-large);
+}
+
+header .hotube i {
+    color: var(--red-color);
+}
+
+header .icons .fa-search {
+    margin-right: var(--padding);
+}
+
+.player {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background-color: var(--black-color);
+}
+
+.player video {
+    width: 100%;
+    height: 100%;
+    max-width: 768px;
+}
+
+body>.info {
+    padding: var(--padding);
+}
+
+.info .metadata .hashtag {
+    display: flex;
+    font-size: var(--font-medium);
+    color: var(--blue-color);
+}
+
+.info .metadata .titleandbutton {
+    display: flex;
+}
+
+.info .metadata .titleandbutton .video {
+    font-size: var(--font-medium);
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleandbutton .video.clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.info .metadata .titleandbutton .moreBtn {
+    height: 100%;
+    transition: transform 50ms ease-in-out;
+}
+
+.info .metadata .titleandbutton .moreBtn.clicked{
+    transform: rotate(180deg);
+}
+
+.hashtag li {
+    margin-right: var(--padding);
+}
+
+.info .metadata>.views {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.action {
+    display: flex;
+    margin: var(--padding) 0;
+    justify-content: space-around;
+}
+
+.action button {
+    display: flex;
+    background: var(--white-color);
+    flex-direction: column;
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.action button i {
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding) / 2);
+    font-size: 16px;
+}
+
+.action button i.active {
+    color: var(--blue-color);
+}
+
+.channel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--grey-light-color);
+    border-bottom: 2px solid var(--grey-light-color);
+}
+
+.channel .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.channel .metadata img {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 45%;
+}
+
+.channel .metadata .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.channel .metadata .info .subscribers {
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+}
+
+.channel .subs {
+    font-size: var(--font-small);
+    color: var(--red-color);
+    background: var(--white-color);
+    text-transform: uppercase;
+}
+
+.upnext {
+    padding: 0 var(--padding);
+}
+
+.upnext>.title {
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+}
+
+.upnext .item {
+    display: flex;
+    margin-top: var(--padding);
+}
+
+.upnext .item .img {
+    flex: 1 1 35%;
+    width: 100%;
+    margin-right: var(--padding);
+}
+
+.upnext .item .img img {
+    width: 100%;
+}
+
+.upnext .item .info {
+    flex: 1 1 60%;
+}
+
+.upnext .item .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.upnext .item .moreBtn {
+    flex: 1 1 5%;
+    background: var(--white-color);
+}
+
+.upnext .item .info .title {
+    font-size: var(--font-medium);
+}
+
+.upnext .item .info .name {
+    font-size: var(--font-small);
+}
+
+.upnext .item .info .views {
+    font-size: var(--font-small);
+}
+
+.infoNupnext {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width:768px) {
+    .infoNupnext {
+        flex-direction: row;
+        margin: var(--padding) 0;
+    }
+}
